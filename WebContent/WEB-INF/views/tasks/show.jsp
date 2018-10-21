@@ -7,7 +7,14 @@
             <c:when test="${tasks != null}">
                 <h2>id : ${tasks.id} のタスク詳細ページ</h2>
 
-                <p>タスク：<c:out value="${tasks.content}" /></p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>タスク</th>
+                            <td><c:out value="${tasks.content}" /></td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
                 <p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">このタスクを編集する</a></p>
